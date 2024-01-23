@@ -236,3 +236,25 @@ if (height) {
   console.log("height is undefined!");
 }
 */
+
+const age = 18;
+if (age === 18) console.log("You just became an adult!"); // srtict
+
+if (age == 18) console.log("You just became an adult!"); // loose
+
+const favourite = Number(prompt("What is your fovorite number?"));
+console.log(favourite);
+
+if (favourite === 23) {
+  console.log("Cool ! 23 is an amazing number!");
+} else if (favourite === 7) {
+  console.log("7 is a also cool number");
+} else if (favourite === 9) {
+  console.log("9 is a also cool number");
+} else {
+  console.log("Number is not 23 or 7 or 9");
+}
+
+if (favourite !== 23) {
+  console.log("Why not 23?");
+}
