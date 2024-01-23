@@ -237,6 +237,7 @@ if (height) {
 }
 */
 
+/*
 const age = 18;
 if (age === 18) console.log("You just became an adult!"); // srtict
 
@@ -258,3 +259,32 @@ if (favourite === 23) {
 if (favourite !== 23) {
   console.log("Why not 23?");
 }
+*/
+
+/*
+const hasDriversLicence = true; // A
+const hasGoodVision = true; // B
+
+console.log(hasDriversLicence && hasGoodVision);
+console.log(hasDriversLicence || hasGoodVision);
+console.log(!hasDriversLicence);
+
+const shouldDrive = hasDriversLicence && hasGoodVision;
+
+
+if (hasDriversLicence && hasGoodVision) {
+  console.log("Sarah is able to drive !");
+} else {
+  console.log("Someone else should drive...");
+}
+
+
+const isTired = false;
+console.log(hasDriversLicence || hasGoodVision || isTired);
+
+if (hasDriversLicence && hasGoodVision && !isTired) {
+  console.log("Sarah is able to drive !");
+} else {
+  console.log("Someone else should drive...");
+}
+*/
