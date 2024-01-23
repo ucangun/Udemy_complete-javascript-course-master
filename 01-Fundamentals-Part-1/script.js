@@ -211,3 +211,28 @@ let n = "1" + 1;
 n = n - 1;
 console.log(n);
 */
+
+/*
+// 5 falsy values: 0 , ' ' , undefined , null , NaN
+
+console.log(Boolean(0));
+console.log(Boolean(undefined));
+console.log(Boolean("Umut"));
+console.log(Boolean({}));
+console.log(Boolean(""));
+
+const money = 0;
+
+if (money) {
+  console.log("Dont spend it at all!");
+} else {
+  console.log("You should get a job!");
+}
+
+let height;
+if (height) {
+  console.log("height is defined");
+} else {
+  console.log("height is undefined!");
+}
+*/
