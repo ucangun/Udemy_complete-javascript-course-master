@@ -44,7 +44,6 @@
 // let language;
 
 // console.log(typeof isIsland, language);
-
 /*
 let age = 30;
 age = 31;
@@ -59,20 +58,19 @@ job = "teacher";
 lastName = "Gün";
 console.log(lastName);
 */
-
 /*
 // Math Operators
-const now = 2037;
-const ageJonas = now - 1991;
-const ageSarah = now - 2018;
+const now = 2039;
+const ageJonas = now - 1998;
+const ageSarah = now - 2019;
 console.log(ageJonas, ageSarah);
 
-console.log(ageJonas * 2, ageJonas / 10, 2 ** 3);
+console.log(ageJonas * 2, ageJonas / 10, 2 ** 4);
 // 2 **3  means 2 to the power of 3 = 2* 2* 2*
 
 const firstName = "Umut";
 const lastName = " Gün";
-console.log(firstName + " " + lastName);
+console.log(firstName + "" + lastName);
 
 // Asignment Operators
 let x = 10 + 5; // 15
@@ -106,7 +104,6 @@ console.log(x, y);
 const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
 */
-
 /*
 //const massMark = 78;
 //const heightMark = 1.69;
