@@ -135,36 +135,32 @@ const markHigherBMI = BMIMark > BMIJohn;
 console.log(BMIMark, BMIJohn, markHigherBMI);
 */
 
-/*
 const firstName = "Umut";
 const job = "Programier";
 const birthYear = 1998;
 const year = 2024;
 
 const umut =
+  "Hey" +
   "I'm " +
-  " " +
   firstName +
-  " , a " +
+  ", a " +
   (year - birthYear) +
-  " " +
-  "years old" +
-  " " +
+  " years old " +
   job +
-  "!";
+  " !";
+
 console.log(umut);
 
-const umutNew = `I'm ${firstName} , a ${year - birthYear} years old ${job}!`;
+const umutNew = `'I'm ${firstName}, a ${year - birthYear} years old ${job} !`;
 console.log(umutNew);
 
-console.log(`Just a regular string...`);
+console.log(`Fener \n\Bahce`);
 
-console.log("String with \n multiple \n lines");
-
-console.log(`String 
-miltiple
-lines`);
-*/
+console.log(`Fener
+Bahce 
+cok 
+yasa`);
 
 /*
 const age = 15;
