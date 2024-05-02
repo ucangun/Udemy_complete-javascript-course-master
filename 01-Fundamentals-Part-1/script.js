@@ -135,6 +135,7 @@ const markHigherBMI = BMIMark > BMIJohn;
 console.log(BMIMark, BMIJohn, markHigherBMI);
 */
 
+/*
 const firstName = "Umut";
 const job = "Programier";
 const birthYear = 1998;
@@ -161,6 +162,7 @@ console.log(`Fener
 Bahce 
 cok 
 yasa`);
+*/
 
 /*
 const age = 15;
@@ -182,6 +184,23 @@ if (birthYear <= 2000) {
 }
 console.log(century);
 */
+const age = 19;
+//const isOldEnough = age >= 18;
+
+if (age >= 18) {
+  console.log("Sarah can start driving licence 🚗");
+} else {
+  const yearsLeft = 18 - age;
+  console.log(`Sarah is too young. Wait another ${yearsLeft} years :)`);
+}
+let century;
+const birthYear = 1991;
+if (birthYear <= 2000) {
+  century = 20;
+} else {
+  century = 21;
+}
+console.log(century);
 
 /*
 //const massMark = 78;
