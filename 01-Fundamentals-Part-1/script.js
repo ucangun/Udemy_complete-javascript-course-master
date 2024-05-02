@@ -1,13 +1,24 @@
-/*
-let js = "amazing";
-console.log(40 + 8 + 23 - 10);
+// let js = "amazing";
+// console.log(40 + 8 + 23 - 10);
 
-console.log("Jonas");
-console.log(23);
+// console.log("Jonas");
+// console.log(23);
 
-let firstName = "Jonas";
-console.log(firstName);
-*/
+// let firstName = "Jonas";
+// console.log(firstName);
+
+// // firstNamePerson;
+// // first_name_person;
+// // $function;
+// // firstName;
+
+// //Assignment 1
+
+// let country = "Deutschland";
+// let continent = "Europa";
+// let population = "80.000.000";
+
+// console.log(country, continent, population);
 
 /*
 let javascriptIsFun = true;
