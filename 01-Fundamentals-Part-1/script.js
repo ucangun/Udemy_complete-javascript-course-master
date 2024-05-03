@@ -105,18 +105,18 @@ const averageAge = (ageJonas + ageSarah) / 2;
 console.log(ageJonas, ageSarah, averageAge);
 */
 
-const massMark = 78;
-const massJohn = 92;
-const heightMark = 1.69;
-const heightJohn = 1.95;
+// const massMark = 78;
+// const massJohn = 92;
+// const heightMark = 1.69;
+// const heightJohn = 1.95;
 
-const BMIMark = massMark / heightMark ** 2;
-const BMIJohn = massJohn / heightJohn ** 2;
+// const BMIMark = massMark / heightMark ** 2;
+// const BMIJohn = massJohn / heightJohn ** 2;
 
-console.log(BMIJohn, BMIMark);
+// console.log(BMIJohn, BMIMark);
 
-const markHigherBMI = BMIMark > BMIJohn;
-console.log(markHigherBMI);
+// const markHigherBMI = BMIMark > BMIJohn;
+// console.log(markHigherBMI);
 
 /*
 //const massMark = 78;
@@ -184,6 +184,7 @@ if (birthYear <= 2000) {
 }
 console.log(century);
 */
+/*
 const age = 19;
 //const isOldEnough = age >= 18;
 
@@ -201,6 +202,22 @@ if (birthYear <= 2000) {
   century = 21;
 }
 console.log(century);
+*/
+
+const massMark = 95;
+const heightMark = 1.88;
+const massJohn = 85;
+const heightJohn = 1.76;
+
+const BMIMark = massMark / heightMark ** 2;
+const BMIJohn = massJohn / (heightJohn * heightJohn);
+const markHigherBMI = BMIMark > BMIJohn;
+
+if (BMIMark > BMIJohn) {
+  console.log(`Mark's (${BMIMark}) BMI is higher than John's (${BMIJohn}) !`);
+} else {
+  console.log(`John's (${BMIJohn}) BMI is higher than Mark's (${BMIMark}) !`);
+}
 
 /*
 //const massMark = 78;
