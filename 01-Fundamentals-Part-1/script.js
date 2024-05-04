@@ -204,6 +204,7 @@ if (birthYear <= 2000) {
 console.log(century);
 */
 
+/*
 const massMark = 95;
 const heightMark = 1.88;
 const massJohn = 85;
@@ -218,6 +219,7 @@ if (BMIMark > BMIJohn) {
 } else {
   console.log(`John's (${BMIJohn}) BMI is higher than Mark's (${BMIMark}) !`);
 }
+*/
 
 /*
 //const massMark = 78;
@@ -251,6 +253,7 @@ if (BMIMark > BMIJohn) {
 const inputYear = "1991";
 console.log(Number(inputYear));
 console.log(Number(inputYear) + 18);
+console.log(inputYear);
 
 console.log(Number("Jonas"));
 console.log(typeof NaN);
@@ -269,9 +272,9 @@ n = n - 1;
 console.log(n);
 */
 
-/*
 // 5 falsy values: 0 , ' ' , undefined , null , NaN
 
+/*
 console.log(Boolean(0));
 console.log(Boolean(undefined));
 console.log(Boolean("Umut"));
@@ -317,7 +320,6 @@ if (favourite !== 23) {
   console.log("Why not 23?");
 }
 */
-
 /*
 const hasDriversLicence = true; // A
 const hasGoodVision = true; // B
@@ -328,13 +330,11 @@ console.log(!hasDriversLicence);
 
 const shouldDrive = hasDriversLicence && hasGoodVision;
 
-
 if (hasDriversLicence && hasGoodVision) {
   console.log("Sarah is able to drive !");
 } else {
   console.log("Someone else should drive...");
 }
-
 
 const isTired = false;
 console.log(hasDriversLicence || hasGoodVision || isTired);
@@ -404,6 +404,66 @@ if ((scoreDolphins && scoreKoalas) >= 100 && scoreDolphins > scoreKoalas) {
   console.log("DRAW!");
 } else {
   console.log("No one wins the trophy");
+}
+*/
+
+// CHALLENGE 3
+/*
+const scoreDolphins = (96 + 108 + 89) / 3;
+const scoreKoalas = (88 + 91 + 110) / 3;
+
+console.log(scoreKoalas, scoreDolphins);
+
+if (scoreDolphins > scoreKoalas) {
+  console.log("Winner is Dolphins");
+} else if (scoreDolphins === scoreKoalas) {
+  console.log("Both of them are Winner!");
+} else if (scoreKoalas > scoreDolphins) {
+  console.log("Winner is Koalas!");
+}
+*/
+
+//BONUS 1
+
+/*
+const scoreDolphins = (97 + 112 + 101) / 3;
+const scoreKoalas = (109 + 95 + 123) / 3;
+
+console.log(scoreKoalas, scoreDolphins);
+
+if ((scoreDolphins && scoreKoalas) >= 100 && scoreDolphins > scoreKoalas) {
+  console.log("Winner is Dolphins");
+} else if (
+  (scoreKoalas && scoreDolphins) >= 100 &&
+  scoreKoalas > scoreDolphins
+) {
+  console.log("Winner is Koalas");
+} else if (scoreDolphins === scoreKoalas) {
+  console.log("DRAW!");
+}
+*/
+
+//BONUS 2
+/*
+const scoreDolphins = (97 + 112 + 101) / 3;
+const scoreKoalas = (109 + 95 + 106) / 3;
+
+console.log(scoreKoalas, scoreDolphins);
+
+if ((scoreDolphins && scoreKoalas) >= 100 && scoreDolphins > scoreKoalas) {
+  console.log("Winner is dolphins");
+} else if (
+  (scoreDolphins && scoreKoalas) >= 100 &&
+  scoreKoalas > scoreDolphins
+) {
+  console.log("Winner is Koalas");
+} else if (
+  (scoreDolphins && scoreKoalas) >= 100 &&
+  scoreDolphins === scoreKoalas
+) {
+  console.log("DRAW!");
+} else {
+  console.log("Nobody is the Winner!");
 }
 */
 
