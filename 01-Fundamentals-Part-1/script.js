@@ -466,7 +466,6 @@ if ((scoreDolphins && scoreKoalas) >= 100 && scoreDolphins > scoreKoalas) {
   console.log("Nobody is the Winner!");
 }
 */
-
 /*
 const day = "monday";
 
@@ -507,7 +506,6 @@ if (day === "monday") {
   console.log("Not a valid day");
 }
 */
-
 /*
 const age = 23;
 age >= 18
@@ -527,7 +525,6 @@ console.log(drink2);
 
 console.log(`I like to drink ${age >= 18 ? "wine 🍷" : "water 💧"}`);
 */
-
 /*
 // CHALLENGE 4//
 
@@ -536,5 +533,85 @@ const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
 
 console.log(
   `The bill was ${bill} , the tip was ${tip} and the final value ${bill + tip} `
+);
+*/
+
+/*
+// CHALLENGE 4
+
+const bill = 275;
+const tip = bill <= 300 && bill >= 50 ? bill * 0.15 : bill * 0.2;
+console.log(tip);
+
+console.log(
+  `The Bill was ${bill}, the Tip was ${tip} and the total value is ${
+    bill + tip
+  } `
+);
+*/
+
+// CHALLENGES
+
+/*
+const numNeighbours = Number(
+  prompt("How many neighbour countries does your country have? ")
+);
+
+if (numNeighbours === 1) {
+  console.log("Only 1 Border");
+} else if (numNeighbours > 1) {
+  console.log(`${numNeighbours} neighbours`);
+} else {
+  console.log("No Borders");
+}
+*/
+
+//
+
+/*
+const language = "english";
+const population = 50;
+const island = false;
+
+if (language === "english" && population <= 50 && !island) {
+  console.log("You should live in Portugal");
+} else {
+  console.log("Portugal does not meet your criteria");
+}
+
+console.log(!island);
+*/
+
+//
+
+/*
+switch (language) {
+  case "chinese":
+  case "mandarin":
+    console.log("MOST number of native speakers!");
+    break;
+  case "spanish":
+    console.log("2nd place in number of native speakers");
+    break;
+  case "english":
+    console.log("3rd place");
+    break;
+  case "hindi":
+    console.log("Number 4");
+    break;
+  case "arabic":
+    console.log("5th most spoken language");
+    break;
+  default:
+    console.log("Great language too :D");
+}
+*/
+
+/*
+const country = "Türkei";
+population = 80;
+
+console.log(
+  `${country}'s population is ${population > 33 ? "above" : "below"} average`
 );
 */
