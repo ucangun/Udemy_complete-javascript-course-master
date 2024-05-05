@@ -111,6 +111,7 @@ const yearsUntilRetirement = function (birthYear, firstName) {
 const retirementUmut = yearsUntilRetirement(1998, "Umut");
 console.log(retirementUmut);
 */
+
 /*
 function logger() {
   console.log("Hey! My name is Umut...");
@@ -220,3 +221,77 @@ const yearUntilRetirement = function (birthYear, firstName) {
   return `${firstName} retires in ${retirement} years`;
 };
 */
+
+/*
+// ! CHALLENGES
+
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3;
+
+let scoreDolphins = calcAverage(85, 54, 41);
+let scoreKoalas = calcAverage(23, 34, 27);
+
+console.log(scoreDolphins, scoreKoalas);
+
+const checkWinner = function (avgKoalas, avgDolphins) {
+  if (avgKoalas >= 2 * avgDolphins) {
+    console.log(`Koalas win ${avgKoalas} to ${avgDolphins} `);
+  } else if (avgDolphins >= 2 * avgKoalas) {
+    console.log(`Dolphins win ${avgDolphins} to ${avgKoalas} `);
+  } else {
+    console.log(`Nobody is the Winner`);
+  }
+};
+
+console.log(checkWinner(scoreDolphins, scoreKoalas));
+*/
+
+// ! FUNCTIONS
+/*
+function describeCountry(country, population, capitalCity) {
+  return `${country} has ${population} people and its capital city is ${capitalCity}`;
+}
+
+let info = describeCountry("Turkey", 80, "Ankara");
+console.log(info);
+*/
+
+// ! FUNCTION DECLERATION
+/*
+function percentageOfWorld1(population) {
+  return (population / 7900) * 100;
+}
+
+const popTurkey = percentageOfWorld1(80);
+console.log(popTurkey);
+
+
+// ! FUNCTION EXPRESSION
+const percentageOfWolrd2 = function (population) {
+  return (population / 7900) * 100;
+};
+
+const popGermany = percentageOfWolrd2(90);
+console.log(popGermany);
+*/
+
+// ! ARROW FUNCTION
+/*
+const percentageOfWolrd3 = (population) => (population / 7900) * 100;
+
+const popSomewhere = percentageOfWolrd3(60);
+console.log(popSomewhere);
+*/
+
+// ! CALLING OTHER FUNCTIONS
+
+function percentageOfWorld1(population) {
+  return (population / 7900) * 100;
+}
+
+const describePopulation = function (country, population) {
+  const percentage = percentageOfWorld1(population);
+  const description = `${country} has ${population} million people, which is about ${percentage} of the world ! `;
+  console.log(description);
+};
+
+describePopulation("Turkey", 80);
