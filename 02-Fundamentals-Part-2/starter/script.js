@@ -298,7 +298,7 @@ describePopulation("Turkey", 80);
 */
 
 /*  -------------------------------- */
-/*               ARRAYS              */
+/*           //! ARRAYS              */
 /* --------------------------------- */
 /*
 const friend1 = "Micheal";
@@ -379,6 +379,7 @@ if (friends.includes("Steven")) {
 }
 */
 
+/*
 // ! CHALLENGE 2
 
 const calcTip = function (bill) {
@@ -403,3 +404,110 @@ const total = [
 console.log(total);
 
 //console.log(calcTip(100));
+*/
+
+/* ---------------------------------- */
+/*            // ! OBJECTS            */
+/* ---------------------------------- */
+
+/*
+const umutArray = [
+  "umut",
+  "Gun",
+  2024 - 1998,
+  "Developer",
+  ["Steven", "Eleni", "Marco"],
+];
+
+const umut = {
+  firstName: "umut",
+  lastName: "Gun",
+  age: 2024 - 1998,
+  job: "Developer",
+  friends: ["Steven", "Eleni", "Marco"],
+};
+*/
+
+/*
+const umut = {
+  firstName: "umut",
+  lastName: "Gun",
+  age: 2024 - 1998,
+  job: "Developer",
+  friends: ["Steven", "Eleni", "Marco"],
+};
+
+console.log(umut);
+
+console.log(umut.lastName);
+console.log(umut["lastName"]);
+
+const nameKey = "Name";
+console.log(umut["first" + nameKey]);
+console.log(umut["last" + nameKey]);
+
+const interestedIn = prompt(
+  "What do you wamt to know about umut ? Choose between firstName, lastName, age, job and friends "
+);
+console.log(umut[interestedIn]);
+
+if (umut[interestedIn]) {
+  console.log(umut[interestedIn]);
+} else {
+  console.log(
+    "Wrong request! Choose between firstName, lastName, age, job and friends "
+  );
+}
+
+umut.location = "Germany";
+umut["twitter"] = "ucangun";
+console.log(umut);
+
+// ! CHALLENGE
+
+console.log(
+  `${umut.firstName} has ${umut.friends.length} friends and his best friend is called ${umut.friends[0]}`
+);
+*/
+
+const umut = {
+  firstName: "umut",
+  lastName: "Gun",
+  birthYear: 1998,
+  job: "Developer",
+  friends: ["Steven", "Eleni", "Marco"],
+  hasDriverLicence: true,
+
+  // calcAge: function (birthYear) {
+  //   return 2024 - birthYear;
+  // },
+
+  // calcAge: function () {
+  //   // console.log(this);
+  //   return 2024 - this.birthYear;
+  // },
+
+  calcAge: function () {
+    this.age = 2024 - this.birthYear;
+    return this.age;
+  },
+
+  getSummary: function () {
+    return `${this.firstName} is a ${this.calcAge()} years old ${
+      this.job
+    } and he has ${this.hasDriverLicence ? "a" : "no"} driver's licence `;
+  },
+};
+
+console.log(umut.calcAge());
+
+console.log(umut.age);
+console.log(umut.age);
+console.log(umut.age);
+
+// console.log(umut.calcAge(1998));
+//console.log(umut["calcAge"](1998));
+
+// ! CHALLENGE
+
+console.log(umut.getSummary());
