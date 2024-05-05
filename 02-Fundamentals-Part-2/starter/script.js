@@ -283,7 +283,7 @@ console.log(popSomewhere);
 */
 
 // ! CALLING OTHER FUNCTIONS
-
+/*
 function percentageOfWorld1(population) {
   return (population / 7900) * 100;
 }
@@ -295,3 +295,84 @@ const describePopulation = function (country, population) {
 };
 
 describePopulation("Turkey", 80);
+*/
+
+/*  -------------------------------- */
+/*               ARRAYS              */
+/* --------------------------------- */
+/*
+const friend1 = "Micheal";
+const friend2 = "Steven";
+const friend3 = "Peter";
+
+const friends = ["Micheal", "Steven", "Peter"];
+console.log(friends);
+
+console.log(friends[0]);
+console.log(friends[2]);
+
+console.log(friends.length);
+console.log(friends[friends.length - 1]);
+
+friends[2] = "Jay";
+console.log(friends);
+
+const firstName = "Umut";
+const jonas = [firstName, "Can", 2024 - 1998, "teacher", friends];
+console.log(jonas);
+console.log(jonas.length);
+//const years = new Array(1991, 1984, 2008, 2020);
+
+// Exercise
+
+const calcAge = function (birthYear) {
+  return 2024 - birthYear;
+};
+const years = [1990, 1967, 2002, 2010, 2018];
+
+const age1 = calcAge(years[0]);
+const age2 = calcAge(years[1]);
+const age3 = calcAge(years[years.length - 1]);
+console.log(age1, age2, age3);
+
+const ages = [
+  calcAge(years[0]),
+  calcAge(years[1]),
+  calcAge(years[years.length - 1]),
+];
+
+console.log(ages);
+*/
+
+const friends = ["Micheal", "Steven", "Peter"];
+
+//Add elements
+const newLength = friends.push("Jay");
+console.log(friends); // Last
+console.log(newLength);
+
+friends.unshift("John"); // First
+console.log(friends);
+
+//Remove elements
+friends.pop(); // Last
+const popped = friends.pop();
+console.log(popped);
+console.log(friends);
+
+friends.shift(); // First
+console.log(friends);
+
+// ************
+
+console.log(friends.indexOf("Steven"));
+console.log(friends.indexOf("Bob"));
+
+friends.push(23);
+console.log(friends.includes("Steven"));
+console.log(friends.includes("Bob"));
+console.log(friends.includes(23));
+
+if (friends.includes("Steven")) {
+  console.log("You have a friend called Steven");
+}
