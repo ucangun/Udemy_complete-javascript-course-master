@@ -570,6 +570,7 @@ for (let rep = 1; rep <= 10; rep++) {
 }
 */
 
+/*
 const umut = [
   "umut",
   "Gun",
@@ -613,4 +614,26 @@ console.log("-----BRREAK WITH NUMBER-----");
 for (let i = 0; i < umut.length; i++) {
   if (typeof umut[i] == "number") break;
   console.log(umut[i], typeof umut[i]);
+}
+*/
+
+const umut = [
+  "umut",
+  "Gun",
+  2024 - 1998,
+  "Developer",
+  ["Steven", "Eleni", "Marco"],
+  true,
+];
+
+for (let i = umut.length - 1; i >= 0; i--) {
+  console.log(i, umut[i]);
+}
+
+for (let exercise = 1; exercise < 4; exercise++) {
+  console.log(`-----------------Starting exercise ${exercise}`);
+
+  for (let rep = 1; rep < 6; rep++) {
+    console.log(`Exercise ${exercise} Lifting weight repetition ${rep}`);
+  }
 }
