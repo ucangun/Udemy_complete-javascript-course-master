@@ -564,6 +564,53 @@ console.log("Lifting weights repetition 10");
 */
 // for loop keeps runnung while condition is TRUE
 
+/*
 for (let rep = 1; rep <= 10; rep++) {
   console.log(`Lifting weights repetition ${rep} 🏋🏻‍♂️ `);
+}
+*/
+
+const umut = [
+  "umut",
+  "Gun",
+  2024 - 1998,
+  "Developer",
+  ["Steven", "Eleni", "Marco"],
+  true,
+];
+
+const types = [];
+
+for (let i = 0; i < umut.length; i++) {
+  // Reading from umut array
+  console.log(umut[i], typeof umut[i]);
+
+  // Filling types array
+  // types[i] = typeof umut[i];
+  types.push(typeof umut[i]);
+}
+
+console.log(types);
+
+const years = [1991, 2007, 1969, 2020];
+const ages = [];
+
+for (let i = 0; i < years.length; i++) {
+  2037 - years[i];
+  ages.push(2037 - years[i]);
+}
+
+console.log(ages);
+
+// ! continue and break
+console.log("-----ONLY STRING-----");
+for (let i = 0; i < umut.length; i++) {
+  if (typeof umut[i] !== "string") continue;
+  console.log(umut[i], typeof umut[i]);
+}
+
+console.log("-----BRREAK WITH NUMBER-----");
+for (let i = 0; i < umut.length; i++) {
+  if (typeof umut[i] == "number") break;
+  console.log(umut[i], typeof umut[i]);
 }
