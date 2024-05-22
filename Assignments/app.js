@@ -282,3 +282,13 @@ printBookInfo({
 });
 
 printBookInfo({ title: "Algorithms", author: "Robert Sedgewick" });
+
+// !
+const bookAuthors = [...books[0].author, ...books[1].author];
+console.log(bookAuthors);
+
+function spellWorld(str) {
+  console.log(...str);
+}
+
+spellWorld("JavaScript");
