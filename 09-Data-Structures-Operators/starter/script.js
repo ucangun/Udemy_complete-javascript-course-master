@@ -56,10 +56,21 @@ const restaurant = {
     console.log(otherIngredients);
   },
 };
+
 /////////////////////////////////////////////////
 //***********************************************/
 
+restaurant.numGuests = 0;
+const guests = restaurant.numGuests || 10;
+console.log(guests);
+
+// Nullish : null and undefined ( Not 0 , "")
+const guestsCorrect = restaurant.numGuests ?? 10;
+console.log(guestsCorrect);
+/////////////////////////////////////////////////
+//***********************************************/
 //!   SHORT-CIRCUITING
+/*
 console.log('-------OR---------');
 console.log(3 || 'Jonas');
 console.log('' || 'Jonas');
@@ -84,7 +95,7 @@ if (restaurant.orderPizza) {
   restaurant.orderPizza('mushrooms', 'spinach');
 }
 restaurant.orderPizza && restaurant.orderPizza('mushrooms', 'spinach');
-
+*/
 /////////////////////////////////////////////////
 //***********************************************/
 /*
