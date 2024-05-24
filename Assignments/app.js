@@ -223,6 +223,7 @@ const books = [
   },
 ];
 
+/*
 const [firstBook, secondBook] = books;
 console.log(firstBook, secondBook);
 
@@ -373,6 +374,43 @@ const game = {
     team2: 6.5,
   },
 };
+
+const scorers = {
+  Gnarby: 1,
+  Hummels: 1,
+  Lewandowski: 2,
+};
+console.log(
+  "*******************************************************************************************************************************"
+);
+// 1.
+for (const [i, player] of game.scored.entries()) {
+  console.log(`Goal ${i + 1}: ${player}`);
+}
+// 2.
+
+const odds = Object.values(game.odds);
+const avgOdd = function () {
+  let sum = 0;
+  for (const odd of odds) {
+    sum += odd;
+  }
+  return sum / odds.length;
+};
+
+console.log(avgOdd());
+
+// 3.
+const x = Object.entries(game.odds);
+
+for (const [team, odd] of x) {
+  const teamStr = team === "x" ? "draw" : `victory ${game[team]}`;
+  console.log(`Odd of ${teamStr} ${odd}`);
+}
+
+console.log(
+  "*******************************************************************************************************************************"
+);
 //1.
 const [players1, players2] = game.players;
 //2.
