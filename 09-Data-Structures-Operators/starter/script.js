@@ -58,7 +58,7 @@ const restaurant = {
 
 /////////////////////////////////////////////////
 //***********************************************/
-
+/*
 const rest = new Map();
 rest.set('name', 'Classico Italiano');
 rest.set(1, 'Firenze, Italy');
@@ -90,7 +90,7 @@ console.log(rest);
 console.log(rest.size);
 console.log(rest.get(arr));
 
-//****/
+///
 const question = new Map([
   ['question', 'What is the best programming language in the world?'],
   [1, 'C'],
@@ -126,7 +126,7 @@ console.log([...question]);
 console.log([...question.entries()]);
 console.log([...question.keys()]);
 console.log([...question.values()]);
-
+*/
 /////////////////////////////////////////////////
 //***********************************************/
 /*
