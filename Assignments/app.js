@@ -333,7 +333,7 @@ for (let i = 0; i <= books.length; i++) {
 console.log(
   "*******************************************************************************************************************************"
 );
-
+/*
 const game = {
   team1: "Bayern Munich",
   team2: "Borrussia Dortmund",
@@ -480,3 +480,30 @@ printGoals(...game.scored);
 //7.
 team1 < team2 && console.log("Team 1 is more likely to win ");
 team1 > team2 && console.log("Team 2 is more likely to win ");
+*/
+console.log(
+  "*******************************************************************************************************************************"
+);
+document.body.append(document.createElement("textarea"));
+document.body.append(document.createElement("button"));
+
+document.querySelector("button").addEventListener("click", function () {
+  const text = document.querySelector("textarea").value;
+  const rows = text.split("\n");
+  console.log(rows);
+
+  for (const [i, row] of rows.entries()) {
+    const [first, second] = row.toLowerCase().trim().split("_");
+
+    if (second && second.length > 0) {
+      const output = `${first}${second.replace(
+        second[0],
+        second[0].toUpperCase()
+      )}`;
+
+      console.log(`${output.padEnd(20)}${"✅".repeat(i + 1)}`);
+    } else {
+      console.log(`${row.trim()} doğru formatta değil.`);
+    }
+  }
+});
