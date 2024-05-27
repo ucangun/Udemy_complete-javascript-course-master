@@ -56,6 +56,7 @@ newPassport(jonas);
 checkIn(flight, jonas);
 */
 
+/*
 const oneWord = function (str) {
   return str.replace(/ /g, "").toLowerCase();
 };
@@ -83,3 +84,20 @@ const high5 = function () {
 document.body.addEventListener("click", high5);
 
 ["Jonas", "Martha", "Adam"].forEach(high5);
+*/
+
+const greet = function (greeting) {
+  return function (name) {
+    console.log(`${greeting} ${name}`);
+  };
+};
+const greeterHey = greet("Hey");
+greeterHey("Jonas");
+greeterHey("Umut");
+
+greet("Hello")("Umut");
+
+// Challenge
+
+const greetArr = (greeting) => (name) => console.log(`${greeting} ${name}`);
+greetArr("Hi")("Umut");
