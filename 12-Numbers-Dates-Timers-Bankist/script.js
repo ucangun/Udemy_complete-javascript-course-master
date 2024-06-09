@@ -356,7 +356,7 @@ labelBalance.addEventListener("click", () => {
   });
 });
 */
-
+/*
 // 287,460,000,000
 const diameter = 287_460_000_000;
 console.log(diameter);
@@ -372,3 +372,37 @@ console.log(PI);
 
 console.log(Number("230_000"));
 console.log(parseInt("230_000"));
+*/
+/*
+console.log(2 ** 53 - 1);
+console.log(Number.MAX_SAFE_INTEGER);
+console.log(2 ** 53 + 1);
+console.log(2 ** 53 + 2);
+console.log(2 ** 53 + 3);
+console.log(2 ** 53 + 4);
+
+console.log(6514164198146416871841864168416814168164116468146841684164684165n);
+console.log(BigInt(6817286173268712687));
+
+// Operations
+console.log(10000n + 10000n);
+console.log(10054500n * 89725987289727292878685415415n);
+//console.log(Math.sqrt(16n));
+
+const huge = 41685418542185415841385143n;
+const num = 23;
+console.log(huge * BigInt(num));
+
+// Exceptions
+console.log(20n > 15);
+console.log(20n === 20);
+console.log(typeof 20n);
+console.log(20n == 20);
+
+console.log(huge + "is Really big!");
+
+// Divisions
+
+console.log(12n / 3n);
+console.log(10 / 3);
+*/
