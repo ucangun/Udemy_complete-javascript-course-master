@@ -65,6 +65,31 @@ btnScrollTo.addEventListener("click", function (e) {
 });
 
 ///////////////////////////////////////
+// Page navigation
+
+// document.querySelectorAll('.nav__link').forEach(function (el) {
+//   el.addEventListener('click', function (e) {
+//     e.preventDefault();
+//     const id = this.getAttribute('href');
+//     console.log(id);
+//     document.querySelector(id).scrollIntoView({ behavior: 'smooth' });
+//   });
+// });
+
+// 1. Add event listener to common parent element
+// 2. Determine what element originated the event
+
+document.querySelector(".nav__links").addEventListener("click", function (e) {
+  e.preventDefault();
+
+  // Matching strategy
+  if (e.target.classList.contains("nav__link")) {
+    const id = e.target.getAttribute("href");
+    document.querySelector(id).scrollIntoView({ behavior: "smooth" });
+  }
+});
+
+///////////////////////////////////////
 ///////////////////////////////////////
 ///////////////////////////////////////
 ///////////////////////////////////////
@@ -181,6 +206,7 @@ setTimeout(() => h1.removeEventListener("mouseenter", alertH1), 3000);
 
 ///////////////////////////////////////
 // Event Propagation in Practice
+/*
 const randomInt = (min, max) =>
   Math.floor(Math.random() * (max - min + 1) + min);
 const randomColor = () =>
@@ -204,3 +230,4 @@ document.querySelector(".nav").addEventListener("click", function (e) {
   this.style.backgroundColor = randomColor();
   console.log("NAV", e.target, e.currentTarget);
 });
+*/
