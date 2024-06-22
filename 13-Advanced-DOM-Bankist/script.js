@@ -77,3 +77,51 @@ document
     message.remove();
     //message.parentElement.removeChild(message);
   });
+
+// Styles
+
+message.style.backgroundColor = "#37383d";
+message.style.width = "120%";
+
+console.log(message.style.height);
+
+console.log(getComputedStyle(message).color);
+console.log(getComputedStyle(message).width);
+console.log(getComputedStyle(message).height);
+
+message.style.height =
+  Number.parseFloat(getComputedStyle(message).height, 10) + 40 + "px";
+
+//document.documentElement.style.setProperty("--color-primary", "orangered");
+
+// Attributes
+
+const logo = document.querySelector(".nav__logo");
+console.log(logo.alt);
+console.log(logo.id);
+console.log(logo.className);
+console.log(logo.src);
+
+logo.alt = "Beatiful minimalist logo";
+
+console.log(logo.getAttribute("alt"));
+console.log(logo.getAttribute("src"));
+logo.setAttribute("company", "Bankist");
+
+const link = document.querySelector(".twitter-link");
+console.log(link.href);
+console.log(link.getAttribute("href"));
+
+// Data attributes
+
+console.log(logo.dataset.versionNumber);
+
+// Classes
+
+logo.classList.add("c");
+logo.classList.remove("c");
+logo.classList.toggle("c");
+logo.classList.contains("c");
+
+// Dont use
+logo.className = "jonas";
