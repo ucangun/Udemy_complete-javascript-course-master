@@ -42,6 +42,7 @@ getCountryData("portugal");
 getCountryData("turkey");
 getCountryData("germany");
 */
+
 const renderCountry = function (data, className = "") {
   const html = `
   <article class="country ${className}">
@@ -62,7 +63,7 @@ const renderCountry = function (data, className = "") {
   countriesContainer.insertAdjacentHTML("beforeend", html);
   countriesContainer.style.opacity = "1";
 };
-
+/*
 const getCountryAndNeighbour = function (country) {
   // AJAX call country 1
   const request = new XMLHttpRequest();
@@ -105,3 +106,39 @@ const getCountryAndNeighbour = function (country) {
 
 //getCountryAndNeighbour("portugal");
 getCountryAndNeighbour("turkey");
+*/
+/*
+const request = new XMLHttpRequest();
+request.open(
+  "GET",
+  `https://countries-api-836d.onrender.com/countries/name/${country}`
+);
+request.send();
+*/
+
+const request = fetch(
+  "https://countries-api-836d.onrender.com/countries/name/turkey"
+);
+/*
+const getCountryData = function (country) {
+  fetch(`https://countries-api-836d.onrender.com/countries/name/${country}`)
+    .then((response) => {
+      console.log(response);
+      return response.json();
+    })
+    .then(([data]) => {
+      console.log(data);
+      renderCountry(data);
+    });
+};
+getCountryData("turkey");
+*/
+
+// without console
+
+const getCountryData = function (country) {
+  fetch(`https://countries-api-836d.onrender.com/countries/name/${country}`)
+    .then((response) => response.json())
+    .then(([data]) => renderCountry(data));
+};
+getCountryData("turkey");
