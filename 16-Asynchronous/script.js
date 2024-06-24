@@ -142,26 +142,35 @@ getCountryData("turkey");
 
 // without console
 
+const getJSON = function (url, errorMsg = "Something went wrong") {
+  return fetch(url).then((response) => {
+    if (!response.ok) throw new Error(`${errorMsg} ${response.status}`);
+    return response.json();
+  });
+};
+
 const getCountryData = function (country) {
   // Country 1
-  fetch(`https://countries-api-836d.onrender.com/countries/name/${country}`)
-    .then((response) => response.json())
+  getJSON(
+    `https://countries-api-836d.onrender.com/countries/name/${country}`,
+    "Country not found"
+  )
     .then((data) => {
       renderCountry(data[0]);
       const neighbour = data[0].borders?.[0];
 
-      if (!neighbour) return;
+      if (!neighbour) throw new Error("No neighbour found!");
 
       // Country 2
-      return fetch(
-        `https://countries-api-836d.onrender.com/countries/alpha/${neighbour}`
+      return getJSON(
+        `https://countries-api-836d.onrender.com/countries/alpha/${neighbour}`,
+        "Country not found"
       );
     })
-    .then((response) => response.json())
     .then((data) => renderCountry(data, "neighbour"))
     .catch((err) => {
       console.error(`${err} 💥💥💥 `);
-      renderError(`Something went wrong ${err}. Try again! `);
+      renderError(`Something went wrong ${err} 💥 Try again! `);
     })
     .finally(() => {
       countriesContainer.style.opacity = "1";
@@ -172,4 +181,4 @@ btn.addEventListener("click", function () {
   getCountryData("germany");
 });
 
-getCountryData("gasdfsdf");
+getCountryData("australia");
