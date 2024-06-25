@@ -141,14 +141,15 @@ getCountryData("turkey");
 */
 
 // without console
-
+/*
 const getJSON = function (url, errorMsg = "Something went wrong") {
   return fetch(url).then((response) => {
     if (!response.ok) throw new Error(`${errorMsg} ${response.status}`);
     return response.json();
   });
 };
-
+*/
+/*
 const getCountryData = function (country) {
   // Country 1
   getJSON(
@@ -180,7 +181,7 @@ const getCountryData = function (country) {
 btn.addEventListener("click", function () {
   getCountryData("germany");
 });
-
+*/
 //getCountryData("australia");
 
 ///////////////////////////////////////
@@ -255,6 +256,7 @@ Promise.resolve("Resolved promise 2 ").then((res) => {
 console.log("Test end");
 */
 
+/*
 const lotteryPromise = new Promise((resolve, reject) => {
   console.log("Lotter draw is happening");
   setTimeout(() => {
@@ -276,7 +278,8 @@ const wait = (seconds) => {
     setTimeout(resolve, seconds * 1000);
   });
 };
-
+*/
+/*
 wait(1)
   .then(() => {
     console.log("1 second passed");
@@ -307,3 +310,49 @@ wait(1)
 
 Promise.resolve("abc").then((x) => console.log(x));
 Promise.reject(new Error("Problem!")).catch((x) => console.error(x));
+*/
+
+///////////////////////////////////////
+// Promisifying the Geolocation API
+
+const getPosition = function () {
+  return new Promise(function (resolve, reject) {
+    // navigator.geolocation.getCurrentPosition(
+    //   (position) => resolve(position),
+    //   (err) => reject(err)
+    // );
+    navigator.geolocation.getCurrentPosition(resolve, reject);
+  });
+};
+
+getPosition().then((pos) => console.log(pos));
+
+const whereAmI = function () {
+  getPosition()
+    .then((pos) => {
+      const { latitude: lat, longitude: lng } = pos.coords;
+
+      return fetch(`https://geocode.xyz/${lat},${lng}?geoit=json`);
+    })
+    .then((res) => {
+      if (!res.ok) throw new Error(`Problem with geocoding ${res.status}`);
+      return res.json();
+    })
+    .then((data) => {
+      console.log(data);
+      console.log(`You are in ${data.city}, ${data.country}`);
+
+      return fetch(
+        `https://countries-api-836d.onrender.com/countries/name/${data.country}`
+      );
+    })
+    .then((res) => {
+      if (!res.ok) throw new Error(`Country not found (${res.status})`);
+
+      return res.json();
+    })
+    .then((data) => renderCountry(data[0]))
+    .catch((err) => console.error(`${err.message} 💥`));
+};
+
+btn.addEventListener("click", whereAmI);
